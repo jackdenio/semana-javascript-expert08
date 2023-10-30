@@ -17,6 +17,16 @@ view.configureOnFileChange(file => {
   }, 5000)   
 })
 
+async function fakeFetch() {
+  const filePath = '/videos/frag_bunny.mp4'
+  const response = await fetch(filePath, {
+    method: "HEAD"
+  })
+  // response.headers.get('content-length')
+  // debugger 
+}
+
+fakeFetch()
 
 
 
